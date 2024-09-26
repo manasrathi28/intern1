@@ -1,0 +1,251 @@
+/* Body Styles */
+body {
+  background-color: #121212; /* Dark background for the whole app */
+  color: #e0e0e0; /* Light text color for contrast */
+  font-family: Arial, sans-serif; /* Font family */
+  margin: 0;
+  padding: 0; /* Remove padding around the body */
+  height: 100vh; /* Set body height to full viewport height */
+  overflow: hidden; /* Hide overflow to prevent scrolling */
+}
+
+/* Modal Overlay */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8); /* Darker overlay for better visibility */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Ensure it appears above other elements */
+}
+
+/* Modal Styles */
+.modal {
+  background: #2d2d2d; /* Dark background for the modal */
+  padding: 20px;
+  border-radius: 8px;
+  width: 400px; /* Width of the modal */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+  color: #e0e0e0; /* Text color */
+  position: relative; /* For positioning close button */
+}
+
+/* Close Button */
+.close-button {
+  cursor: pointer;
+  font-size: 24px;
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  color: #e0e0e0; /* Close button color */
+}
+
+/* Button Styles */
+.submit, .cancel {
+  background: #3b82f6; /* Button background color */
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px; /* Margin above buttons */
+  transition: background 0.3s ease;
+}
+
+.submit:hover {
+  background: #2563eb; /* Darker shade on hover */
+}
+
+.cancel {
+  background: #ef4444; /* Cancel button color */
+}
+
+.cancel:hover {
+  background: #dc2626; /* Darker shade on hover */
+}
+
+/* Input Styles */
+input[type="text"],
+input[type="date"],
+select {
+  width: 100%; /* Full width */
+  padding: 10px; /* Padding */
+  margin-top: 8px; /* Space above inputs */
+  border-radius: 5px; /* Rounded corners */
+  border: 1px solid #ccc; /* Border style */
+  background: #3a3a3a; /* Dark background for inputs */
+  color: #e0e0e0; /* Light text color for inputs */
+}
+
+/* Recurrence Label */
+label {
+  display: block; /* Make label a block element */
+  margin-top: 10px; /* Space above label */
+  font-weight: bold; /* Bold text */
+}
+
+/* General Button Styles */
+button {
+  margin-right: 10px; /* Space between buttons */
+}
+
+/* Heading Styles */
+h2 {
+  font-size: 24px; /* Larger font size */
+  margin-bottom: 10px; /* Space below the heading */
+  font-weight: bold; /* Bold heading */
+}
+
+/* Task Calendar Container */
+/* Task Calendar Container */
+/* Task Calendar Container */
+.task-calendar {
+  background-color: #2d2d2d; /* Darker background for better contrast */
+  height: calc(100vh - 40px); /* Use full height, adjust for any margin */
+  margin: 10px 10px 0 5px; /* No margin at the bottom, minimal left margin */
+  overflow: hidden; /* Hide overflow to prevent scrolling */
+}
+
+/* Task Item Styling */
+.task-item {
+  border: 1px solid #444;
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 5px;
+}
+
+/* Calendar Styles */
+.react-calendar {
+  border: none;
+  width: 100% !important; /* Make the calendar full width */
+  height: 100%; /* Full height for the calendar */
+  overflow: hidden; /* Remove scrollbar */
+}
+
+/* Adjust day numbers and tile size */
+.react-calendar__tile {
+  height: 80px; /* Fixed height for uniformity */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center items vertically */
+  align-items: center; /* Center items horizontally */
+  font-size: 1.5rem; /* Increase font size of the day numbers */
+  border: 1px solid #555; /* Add border for better visibility */
+  position: relative;
+}
+
+/* Task List Styling */
+.tasks-list {
+  list-style: none; /* Remove default list styling */
+  padding: 0; /* Remove padding */
+  margin: 0; /* Remove margin */
+}
+
+/* Individual Task Item */
+.task-item {
+  margin: 2px 0; /* Add margin between task items */
+  font-size: 0.8rem; /* Smaller font size for tasks */
+  background-color: #1c1c1c; /* Dark background for task items */
+  color: white; /* White text for better contrast */
+  padding: 5px; /* Add padding for task items */
+  border-radius: 4px; /* Rounded corners for task items */
+}
+
+/* Add Task Button */
+.add-task-button {
+  background-color: #4a5568; /* Background color */
+  color: white; /* Text color */
+  padding: 12px 28px; /* Increased padding for a bigger button */
+  font-size: 1.25rem; /* Increased font size */
+  border: none; /* No border */
+  border-radius: 10px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  position: relative; /* Position relative for hover effect */
+  margin: 10px; /* Margin for spacing */
+  transition: background-color 0.3s, transform 0.2s; /* Transition for hover effects */
+}
+
+.add-task-button:hover {
+  background-color: #2d3748; /* Darker shade on hover */
+  transform: translateY(-3px); /* Lift effect on hover */
+}
+
+/* Other Calendar Styles */
+.react-calendar__month-view__days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr); /* 7 columns for days of the week */
+}
+
+/* Ensure the calendar fits within a reasonable viewport height */
+.task-calendar {
+  max-height: 90vh; /* Limit the maximum height of the calendar */
+  overflow: hidden; /* Hide overflow to prevent scrolling */
+}
+
+/* Day Labels Styling */
+.react-calendar__month-view__weekdays {
+  color: rgb(47, 46, 46); /* Light color for the weekdays */
+  font-weight: bold; /* Make the text bold for better visibility */
+  font-size: 1.2rem; /* Adjust font size if necessary */
+}
+
+/* Month Name Styling */
+.react-calendar__month-view__header {
+  font-weight: bold; /* Make the month name bold */
+  color: #e0e0e0; /* Light color for better visibility */
+  font-size: 1.5rem; /* Increase font size if necessary */
+}
+
+/* Highlighted Tile for Assigned Tasks */
+.react-calendar__tile--has-tasks {
+  background-color: #4a5568; /* Background color for days with tasks */
+  color: white; /* Ensure text color is readable */
+  border: 1px solid #3b82f6; /* Optional: add a border for better visibility */
+  border-radius: 5px; /* Optional: rounded corners */
+}
+
+/* Style for the calendar container */
+.react-calendar {
+  border: 1px solid #555; /* Optional: Border around the whole calendar */
+}
+
+/* Ensure the calendar tiles have clear borders for visibility */
+.react-calendar__tile {
+  border: 1px solid #444; /* Gray border for each tile */
+  background-color: #2d2d2d; /* Match tile background with calendar */
+  padding: 10px; /* Add padding for better spacing */
+}
+
+/* Add distinct styles for the weekday headers */
+.react-calendar__month-view__weekdays {
+  display: grid; /* Use grid layout */
+  grid-template-columns: repeat(7, 1fr); /* 7 columns for days of the week */
+  background-color: #1c1c1c; /* Dark background for the header */
+  color: #ffffff; /* White text color for the header */
+  border-bottom: 2px solid #444; /* Bottom border to separate from the tiles */
+}
+
+/* Each tile should have a clear border */
+.react-calendar__month-view__days {
+  display: grid; /* Keep it as a grid */
+  grid-template-columns: repeat(7, 1fr); /* 7 columns for days of the week */
+}
+
+/* Adding space between tiles */
+.react-calendar__month-view__tile {
+  border-right: 1px solid #444; /* Add right border to tiles */
+}
+
+/* Remove right border for the last tile in each row */
+.react-calendar__month-view__tile:nth-child(7n) {
+  border-right: none; /* No right border on last tile of the row */
+}
+
+/* Ensure a consistent horizontal border for each row */
+.react-calendar__month-view__days > div:nth-child(n + 8) {
+  border-top: 1px solid #232020; /* Top border for all rows except the first */
+}
